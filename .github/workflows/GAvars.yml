@@ -16,16 +16,16 @@ jobs:
     #     day_of_week: Sunday
     #     tarvar: value-2
 
-    steps:
+    steps: 
       run: echo "actionstate=yellow" >> $github_var
 
-    - name: Display Name  
-      run: |
+       - name: Display Name  
+         run: |
         # echo $day_of_week  
         # echo $tarvar
         # echo ${{ env.tarvar }}
 
-        echo ${{ env.actionstate }}
+         echo ${{ env.actionstate }}
 
 
 
