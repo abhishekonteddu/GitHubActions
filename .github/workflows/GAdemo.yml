@@ -1,45 +1,44 @@
+name: A basic work flow
+
 on:
-    push:
-      branches: 
-      - main
+  push:
+    branches: [ "main" ]
       
   
-    workflow_dispatch:
+  workflow_dispatch:
   
-    jobs:
-      Dev:
-        name: deploy to Dev
-        runs-on: ubuntu-18.04
+jobs:
+  Dev:
+#    name: deploy to Dev
+    runs-on: ubuntu-latest
       
-      Steps:
+    steps:
   
-        - name: Setup Node
-          uses: actions/setup-node@v1
-          with:
-            node-version: '10.x'
+      - name: Setup Node
+        uses: actions/setup-node@v1
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Display Name  
+        run: echo 'Running on Ubuntu'  
+
   
-        - name: Install Dependencies
-          run: npm install
+  STG:
+    name: deploy to STG
+    runs-on: macos-latest   
+    needs: Dev
   
-        - name: Display Name  
-          run: echo 'Running on Ubuntu'  
-  
-  
-    STG:
-      name: deploy to STG
-      runs-on: macos-latest   
-      needs: Dev
-  
-      Steps:
+    steps:
         - name: Install Dependencies
           run: echo 'Running on Mac'
   
-    PROD:
+  PROD:
       name: deploy to PROD
       runs-on: windows-latest  
       needs: Dev
   
-      Steps:
+      steps:
         - name: Install Dependencies
           run: echo 'Running on Windows'
   
