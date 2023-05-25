@@ -17,15 +17,16 @@ jobs:
     #     tarvar: value-2
 
     steps: 
-      run: echo "actionstate=yellow" >> $github_var
+
 
        - name: Display Name  
+         run: echo "actionstate=yellow" >> $github_var
          run: |
         # echo $day_of_week  
         # echo $tarvar
         # echo ${{ env.tarvar }}
 
-         echo ${{ env.actionstate }}
+           echo ${{ env.actionstate }}
 
 
 
