@@ -18,15 +18,10 @@ jobs:
 
     steps: 
       - name: Display Name  
-        run: echo "actionstate=yellow" >> $GITHUB_ENV
+        run: echo "actionstate=yellow" >> $git_env
 
       - name: Diaplya variable 
         run: echo "${{ env.actionstate }}"
-
-
-
-
-
 
 
         # echo $day_of_week  
