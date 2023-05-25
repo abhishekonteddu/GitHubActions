@@ -36,7 +36,7 @@ on:
   
     PROD:
       name: deploy to PROD
-      runs-on: windows-lates  
+      runs-on: windows-latest  
       needs: Dev
   
       Steps:
