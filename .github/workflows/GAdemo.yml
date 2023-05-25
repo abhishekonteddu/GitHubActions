@@ -1,8 +1,8 @@
 name: A basic work flow
 
 on:
-  push:
-    branches: [ "main" ]
+#  push:
+#    branches: [ "main" ]
       
   
   workflow_dispatch:
