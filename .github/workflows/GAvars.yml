@@ -18,17 +18,13 @@ jobs:
 
     steps: 
       - name: Display Name  
-        run: echo "actionstate=yellow" >> $github_var
-        run: |
+        run: echo "actionstate=yellow" >> $GITHUB_ENV
+        run: echo "${{ env.actionstate }}"
+
+
         # echo $day_of_week  
         # echo $tarvar
         # echo ${{ env.tarvar }}
-
-           echo ${{ env.actionstate }}
-
-
-
-
 
   
       
