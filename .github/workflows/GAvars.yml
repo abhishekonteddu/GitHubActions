@@ -1,0 +1,31 @@
+name: Variables for GA
+
+on:  
+  workflow_dispatch:
+
+env:
+    day_of_week: Funday
+    tarvar: value-1
+  
+jobs:
+  Dev:
+    name: Variable
+    runs-on: ubuntu-latest
+
+    env:
+        day_of_week: Sunday
+        tarvar: value-2
+      
+    steps:
+
+      - name: Display Name  
+        run: |
+          echo $day_of_week  
+          echo $tarvar
+          echo ${{ env.tarvar }}
+
+          
+
+
+  
+      
