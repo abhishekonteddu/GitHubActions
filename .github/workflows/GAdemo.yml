@@ -9,7 +9,7 @@ on:
   
 jobs:
   Dev:
-#    name: deploy to Dev
+    name: deploy to Dev
     runs-on: ubuntu-latest
       
     steps:
@@ -36,7 +36,7 @@ jobs:
   PROD:
       name: deploy to PROD
       runs-on: windows-latest  
-      needs: Dev
+   
   
       steps:
         - name: Install Dependencies
