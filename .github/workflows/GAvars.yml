@@ -18,7 +18,7 @@ jobs:
 
     steps: 
       - name: Display Name  
-        run: echo "actionstate=yellow" >> $git_env
+        run: echo "actionstate=yellow" >> $github_env
 
       - name: Diaplya variable 
         run: echo "${{ env.actionstate }}"
