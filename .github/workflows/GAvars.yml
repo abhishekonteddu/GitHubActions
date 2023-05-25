@@ -18,13 +18,12 @@ jobs:
       
     steps:
 
-      - name: Display Name  
-        run: |
-          echo $day_of_week  
-          echo $tarvar
-          echo ${{ env.tarvar }}
+    - name: Display Name  
+      run: |
+        echo $day_of_week  
+        echo $tarvar
+        echo ${{ env.tarvar }}
 
-#
 
 
 
