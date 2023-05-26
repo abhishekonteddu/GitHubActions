@@ -11,4 +11,4 @@ jobs:
 
     steps:
         - name: display environment
-          run: echo "${{ secrets.PROD_SECRET }}""
+          run: echo "${{ secrets.PROD_SECRET }}"
