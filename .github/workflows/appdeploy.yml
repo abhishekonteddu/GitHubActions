@@ -18,8 +18,7 @@ jobs:
     runs-on: ubuntu-latest
    
     steps: 
-    #   - name: Create Project 
-    #     run: dotnet new web --name webapplication01
+      - uses: actions/checkout@v3   
       - name: Setup .NET Core SDK ${{ env.dotnet-version }}
         uses: actions/setup-dotnet@v3
         with:
