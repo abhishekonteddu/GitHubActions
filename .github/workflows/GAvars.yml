@@ -9,7 +9,7 @@ on:
   
 jobs:
   Default_vars:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Print default vars
