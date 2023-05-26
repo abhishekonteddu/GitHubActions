@@ -9,7 +9,7 @@ env:
 defaults:
   run:
     shell: zsh
-    working_directory: ./webapplication01
+    working_directory: cd webapplication01/
   
 jobs:
   Build:
