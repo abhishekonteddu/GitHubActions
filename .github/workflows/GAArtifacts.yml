@@ -17,15 +17,15 @@ jobs:
             path: file.txt
       
 
-  Download_Artifact:
-    runs-on: ubuntu-latest
-    needs: Upload_Artifact
+#   Download_Artifact:
+#     runs-on: ubuntu-latest
+#     needs: Upload_Artifact
             
-    steps:    
-#        - name: download 
+#     steps:    
+# #        - name: download 
           
-        - uses: actions/download-artifact@v3
-          with:
-            name: my-artifact
+#         - uses: actions/download-artifact@v3
+#           with:
+#             name: my-artifact
 
-        - run: cat file.txt
+#         - run: cat file.txt
