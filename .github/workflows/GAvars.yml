@@ -8,25 +8,42 @@ on:
 #     tarvar: value-1
   
 jobs:
-  Dev:
-    name: Variable
-    runs-on: ubuntu-latest
+  Default_vars:
+    runs-on: windows-latest
 
-    # env:
-    #     day_of_week: Sunday
-    #     tarvar: value-2
-
-    steps: 
-      - name: Display Name  
-        run: echo "actionstate=yellow" >> $GITHUB_ENV
-
-      - name: Diaplya variable 
-        run: echo "${{ env.actionstate }}"
+    steps:
+      - name: Print default vars
+        run: | 
+         echo "$GITHUB_RESPOSITORY_OWNER"
+         echo "$GITHUB_RUN_NUMBER"
+         echo "$RUNNER_NAME"
 
 
-        # echo $day_of_week  
-        # echo $tarvar
-        # echo ${{ env.tarvar }}
+
+
+
+
+
+
+  # Dev:
+  #   name: Variable
+  #   runs-on: ubuntu-latest
+
+  #   # env:
+  #   #     day_of_week: Sunday
+  #   #     tarvar: value-2
+
+  #   steps: 
+  #     - name: Display Name  
+  #       run: echo "actionstate=yellow" >> $GITHUB_ENV
+
+  #     - name: Diaplya variable 
+  #       run: echo "${{ env.actionstate }}"
+
+
+  #       # echo $day_of_week  
+  #       # echo $tarvar
+  #       # echo ${{ env.tarvar }}
 
   
       
