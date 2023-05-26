@@ -7,10 +7,10 @@ on:
 env:
     dotnet-version: '6.0.x'
 
-# defaults:
-#   run:
-#     shell: bash
-#     working_directory: ./webapplication01
+defaults:
+  run:
+    shell: bash
+    working_directory: ./webapplication01
   
 jobs:
   Build:
