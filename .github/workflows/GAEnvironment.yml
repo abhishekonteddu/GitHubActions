@@ -5,7 +5,7 @@ on:
   
 jobs:
   PROD_Deployment:
-    runs-on: ubuntu-latest
+    runs-on: GA-RUNNER
     environment:
       name: production
 
