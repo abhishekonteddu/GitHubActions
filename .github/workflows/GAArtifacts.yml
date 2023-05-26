@@ -1,0 +1,31 @@
+name: Artifacts
+
+on:
+   push:
+     branches: [ "main" ] 
+#  workflow_dispatch:
+  
+jobs:
+  Upload Artifact:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: upload
+          run: echo "This is the artifact file for GitHub" >> file.txt
+    
+        - uses: actions/upload-artifact@v3
+          with:
+            name: my-artifact
+            path: file.txt
+      
+
+  Download Artifact:
+    runs-on: ubuntu-latest
+            
+    steps:    
+        - name: download  
+        - uses: actions/download-artifact@v3
+          with:
+            name: my-artifact
+        
+          run: cat file.txt
