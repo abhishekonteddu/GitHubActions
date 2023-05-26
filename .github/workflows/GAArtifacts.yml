@@ -6,7 +6,7 @@ on:
 #  workflow_dispatch:
   
 jobs:
-  Upload Artifact:
+  Upload_Artifact:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +19,14 @@ jobs:
             path: file.txt
       
 
-  Download Artifact:
+  Download_Artifact:
     runs-on: ubuntu-latest
-    needs: Upload Artifact
+    needs: Upload_Artifact
             
     steps:    
         - name: download  
-          uses: actions/download-artifact@v3
+        - uses: actions/download-artifact@v3
           with:
             name: my-artifact
         
-        - run: cat file.txt
+          run: cat file.txt
