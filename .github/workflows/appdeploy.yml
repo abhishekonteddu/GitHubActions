@@ -4,11 +4,8 @@ on:
 #    branches: [ "main" ]
   workflow_dispatch:
 
-
 env:
     dotnet-version: '6.0.x'
-
-
 defaults:
     run:
         shell: bash
@@ -18,20 +15,20 @@ jobs:
   Build:
     name: Build Job
     runs-on: ubuntu-latest
-
-
-
-      
-    steps:
-  
+   
+    steps: 
       - name: Setup .NET Core SDK ${{ env.dotnet-version }}
         uses: actions/setup-dotnet@v3
         with:
            dotnet-version: ${{ env.dotnet-version }}
-
       - name: Install dependencies
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release 
       - name: Publish
         run: dotnet publish -c Release -o ${{ env.DOTNET_ROOT }}/myapp 
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: CI artifact
+          path: ${{ env.DOTNET_ROOT }}/myapp 
