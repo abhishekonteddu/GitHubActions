@@ -25,8 +25,8 @@ jobs:
             
     steps:    
         - name: download  
-          uses: actions/download-artifact@v3
+          run: cat file.txt
+          
+        - uses: actions/download-artifact@v3
           with:
             name: my-artifact
-        
-        - run: cat file.txt
