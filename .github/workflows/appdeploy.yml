@@ -6,10 +6,11 @@ on:
 
 env:
     dotnet-version: '6.0.x'
-defaults:
-  run:
-    shell: zsh
-    working_directory: cd webapplication01/
+
+# defaults:
+#   run:
+#     shell: zsh
+#     working_directory: cd webapplication01/
   
 jobs:
   Build:
