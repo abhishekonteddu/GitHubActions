@@ -3,7 +3,7 @@ name: Artifacts
 on:
 #    push:
 #      branches: [ "main" ] 
-# #  workflow_dispatch:
+  workflow_dispatch:
   
 jobs:
   Upload_Artifact:
