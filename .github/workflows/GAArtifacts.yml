@@ -30,4 +30,4 @@ jobs:
           with:
             name: my-artifact
 
-        - run: cat file.txt
+#       - run: cat file.txt
