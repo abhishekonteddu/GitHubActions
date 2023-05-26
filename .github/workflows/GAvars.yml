@@ -13,10 +13,13 @@ jobs:
 
     steps:
       - name: Print default vars
-        run: | 
-         echo "$GITHUB_RESPOSITORY_OWNER"
-         echo "$GITHUB_RUN_NUMBER"
-         echo "$RUNNER_NAME"
+        run: env
+
+
+
+        #  echo "$GITHUB_RESPOSITORY_OWNER"
+        #  echo "$GITHUB_RUN_NUMBER"
+        #  echo "$RUNNER_NAME"
 
 
 
