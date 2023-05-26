@@ -10,7 +10,7 @@ env:
 defaults:
   run:
     shell: bash
-    working_directory: ./webapplication01
+    working-directory: ./webapplication01
   
 jobs:
   Build:
