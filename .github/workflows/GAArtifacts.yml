@@ -24,9 +24,10 @@ jobs:
     needs: Upload_Artifact
             
     steps:    
-        - name: download  
-          run: cat file.txt
+        - name: download 
           
         - uses: actions/download-artifact@v3
           with:
             name: my-artifact
+
+        - run: cat file.txt
