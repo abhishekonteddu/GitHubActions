@@ -9,8 +9,8 @@ env:
 
 # defaults:
 #   run:
-#     shell: zsh
-#     working_directory: cd webapplication01/
+#     shell: bash
+#     working_directory: ./webapplication01
   
 jobs:
   Build:
