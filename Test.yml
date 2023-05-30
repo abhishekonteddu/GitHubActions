@@ -1,0 +1,15 @@
+---
+name: Build and Push Golang Image to AWS ECR
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    name: Build and Push to ECR
+    runs-on: ubuntu-latest
+    steps:
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+      run: env
+  
