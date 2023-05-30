@@ -13,5 +13,5 @@ jobs:
       uses: aws-actions/amazon-ecr-login@v1
       
     - name: variables output 
-      run: {{ steps.login-ecr.env }}
+      run: {{ steps.login-ecr.outputs.env }}
   
